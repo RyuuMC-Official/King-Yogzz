@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="id">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 🛡️ META TAGS -->
+  <title>Kingg Yogzz | Official Hub</title>
+  <meta name="description" content="Minecraft Tutorials, Addons &amp; WhatsApp Channel">
+  <meta name="author" content="Yogzz">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Kingg Yogzz Official Hub">
+  <meta property="og:description" content="Join WhatsApp Channel for latest updates!">
+  <meta property="og:image" content="https://i.imgur.com/YOUR_THUMBNAIL.jpg">
+  <meta property="og:url" content="https://kinggyogzz.vercel.app">
+  <meta property="og:type" content="website">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kingg Yogzz">
+  <meta name="twitter:description" content="WhatsApp Channel + Minecraft Content">
+  <style>
+        /* RESET */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: white;
+            min-height: 100vh;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(20, 30, 48, 0.9);
+            border-radius: 25px;
+            padding: 40px;
+            border: 1px solid rgba(0, 150, 136, 0.3);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            position: relative;
+        }
+        
+        /* GLOW EFFECT */
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #25D366, #128C7E, #075E54, #25D366);
+            z-index: -1;
+            border-radius: 27px;
+            opacity: 0.5;
+            animation: glow 4s linear infinite;
+        }
+        
+        @keyframes glow {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(360deg); }
+        }
+        
+        /* HEADER */
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 25px;
+            border-bottom: 2px solid rgba(37, 211, 102, 0.3);
+        }
+        
+        .logo {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #25D366, #128C7E);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            color: #a5d6a7;
+            opacity: 0.9;
+        }
+        
+        /* WHATSAPP CHANNEL SPECIAL */
+        .wa-channel-section {
+            background: linear-gradient(135deg, rgba(37, 211, 102, 0.1), rgba(18, 140, 126, 0.1));
+            border: 2px solid rgba(37, 211, 102, 0.3);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .wa-channel-section::before {
+            content: '🔔';
+            position: absolute;
+            font-size: 8rem;
+            opacity: 0.05;
+            right: -30px;
+            top: -30px;
+        }
+        
+        .wa-icon {
+            font-size: 4rem;
+            margin-bottom: 15px;
+        }
+        
+        .wa-title {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #25D366;
+        }
+        
+        .wa-description {
+            color: #a5d6a7;
+            margin-bottom: 25px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .wa-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #25D366, #128C7E);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.3);
+        }
+        
+        .wa-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+        }
+        
+        .wa-link {
+            margin-top: 15px;
+            color: #80cbc4;
+            font-size: 0.9rem;
+            word-break: break-all;
+        }
+        
+        /* CONTENT SECTIONS */
+        .section {
+            margin-bottom: 35px;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 18px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #4fc3f7;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        /* CONTACT ITEMS */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .contact-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 15px;
+            padding: 25px;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: 1px solid transparent;
+            text-align: center;
+        }
+        
+        .contact-card:hover {
+            background: rgba(79, 195, 247, 0.1);
+            border-color: rgba(79, 195, 247, 0.3);
+            transform: translateY(-5px);
+        }
+        
+        .contact-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .contact-name {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #4fc3f7;
+        }
+        
+        .contact-info {
+            color: #a5b4cb;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 5px 15px;
+            background: #ff6b6b;
+            color: white;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        
+        /* FOOTER */
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #a5b4cb;
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+        
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .container { padding: 25px; margin: 10px; }
+            .logo { font-size: 2.5rem; }
+            .wa-title { font-size: 1.7rem; }
+            .contact-grid { grid-template-columns: 1fr; }
+        }
+        
+        /* ANIMATIONS */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.6s ease forwards;
+        }
+        
+        .delay-1 { animation-delay: 0.2s; opacity: 0; }
+        .delay-2 { animation-delay: 0.4s; opacity: 0; }
+        .delay-3 { animation-delay: 0.6s; opacity: 0; }
+        
+        /* PREVIEW HIDER */
+        .preview-hidden {
+            display: none;
+        }
+        
+        /* JOIN COUNTER */
+        .counter {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(37, 211, 102, 0.1);
+            border: 1px solid rgba(37, 211, 102, 0.3);
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+        }
+    </style>
+  <link rel="icon" href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text y=%22.9em%22 font-size=%2290%22&gt;👑&lt;/text&gt;&lt;/svg&gt;">
+ </head>
+ <body>
+  <!-- HIDDEN CONTENT -->
+  <div class="preview-hidden">WhatsApp Channel: https://whatsapp.com/channel/0029VbANDvm5vKAEIb0wTq2k</div>
+  <div class="container fade-in">
+   <!-- HEADER -->
+   <header class="header">
+    <div class="logo">👑 Kingg Yogzz</div>
+    <div class="tagline delay-1">YOGZZMC INFORMATION HUB</div>
+   </header>
+   <!-- WHATSAPP CHANNEL SECTION -->
+   <section class="wa-channel-section fade-in delay-1">
+    <div class="wa-icon">📢</div>
+    <h1 class="wa-title">WHATSAPP CHANNEL RESMI</h1>
+    <p class="wa-description">Dapatkan update terbaru tentang Minecraft, addons, dan konten eksklusif langsung di WhatsApp Channel kami!</p>
+    <button class="wa-button" onclick="joinWhatsAppChannel()">🚀 JOIN CHANNEL SEKARANG</button>
+    <div class="wa-link delay-2" id="channelLink">whatsapp.com/channel/0029VbANDvm5vKAEIb0wTq2k</div>
+    <!-- CHANNEL STATS -->
+    <div style="margin-top: 25px; display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+     <div class="stat">
+      <div style="font-size: 1.8rem; color: #25D366;">400+</div>
+      <div style="font-size: 0.8rem; color: #a5d6a7;">Members</div>
+     </div>
+     <div class="stat">
+      <div style="font-size: 1.8rem; color: #25D366;">24/7</div>
+      <div style="font-size: 0.8rem; color: #a5d6a7;">Active</div>
+     </div>
+    </div>
+   </section>
+   <!-- PERSONAL CONTACT -->
+   <section class="section fade-in delay-2">
+    <h2 class="section-title">📞 PERSONAL CONTACT</h2>
+    <div class="contact-grid">
+     <div class="contact-card" onclick="openWhatsAppChat()">
+      <div class="contact-icon">💬</div>
+      <div class="contact-name">WhatsApp Chat</div>
+      <div class="contact-info">+62 838-9241-2120</div>
+      <div style="color: #25D366; font-size: 0.85rem;">Klik untuk chat langsung</div>
+     </div>
+    </div>
+   </section>
+   <!-- SOCIAL PLATFORMS -->
+   <section class="section fade-in delay-3">
+    <h2 class="section-title">🌐 SOCIAL PLATFORMS</h2>
+    <div class="contact-grid">
+     <div class="contact-card" onclick="openTikTok()">
+      <div class="contact-icon">🎵</div>
+      <div class="contact-name">TikTok Official</div>
+      <div class="contact-info">@yogz4329</div>
+      <span class="badge" style="background: #25D366;">NEW</span>
+     </div>
+     <div class="contact-card" onclick="openYouTube()">
+      <div class="contact-icon">📺</div>
+      <div class="contact-name">YouTube Channel</div>
+      <div class="contact-info">Tutorials &amp; Gameplay</div>
+      <span class="badge" style="background: #FF0000;">NEW</span>
+     </div>
+    </div>
+   </section>
+   <!-- FOOTER -->
+   <footer class="footer fade-in delay-3">
+    <div>© 2026 Kingg Yogzz PROJECT</div>
+    <div>Powered by Kingg Yogzz | Creator: Yogzz 🎵</div>
+    <div style="margin-top: 10px; font-size: 0.85rem; opacity: 0.7;">WhatsApp Channel: https://whatsapp.com/channel/0029VbCHHlkE50Udyn5xDw0g</div>
+   </footer>
+  </div>
+  <!-- JOIN COUNTER -->
+  <div class="counter fade-in">
+   <span id="joinCount">1,247</span> people joined
+  </div>
+  <!-- JAVASCRIPT -->
+  <script>
+        // CONFIGURATION - GANTI LINK LU DISINI!
+        const config = {
+            whatsappChannel: "https://whatsapp.com/channel/0029VbANDvm5vKAEIb0wTq2k", // GANTI DENGAN LINK CHANNEL LU
+            whatsappChat: "https://wa.me/6283892412120", // GANTI DENGAN NOMOR LU
+            tiktok: "https://www.tiktok.com/@yogz4329?_r=1&_t=ZS-93B2BvyaUUC", // GANTI DENGAN TIKTOK LU
+            youtube: "https://youtube.com/@yogazzzzzzz?si=gbbK89Z7erU3BUjl", // GANTI DENGAN YOUTUBE LU
+            
+        };
+        
+        // 🟢 WHATSAPP CHANNEL FUNCTION
+        function joinWhatsAppChannel() {
+            const channelLink = config.whatsappChannel;
+            
+            // Copy to clipboard
+            navigator.clipboard.writeText(channelLink).then(() => {
+                // Show success message
+                alert('✅ Link WhatsApp Channel berhasil di-copy!\n\n' + 
+                      'Paste di browser untuk join channel.\n' +
+                      'Atau buka WhatsApp → Updates → + → Join Channel');
+                
+                // Open WhatsApp
+                window.open(channelLink, '_blank');
+                
+                // Update counter animation
+                updateJoinCounter();
+            }).catch(err => {
+                // Fallback: just open link
+                window.open(channelLink, '_blank');
+            });
+        }
+        
+        // 💬 WHATSAPP CHAT FUNCTION
+        function openWhatsAppChat() {
+            const message = encodeURIComponent("Halo Kingg Yogzz! Saya tertarik dengan konten Minecraft mu...");
+            const chatUrl = `${config.whatsappChat}?text=${message}`;
+            
+            // Copy number
+            navigator.clipboard.writeText('+62 812-3456-7890').then(() => {
+                alert('📱 Nomor WhatsApp berhasil di-copy!\nMembuka WhatsApp...');
+                window.open(chatUrl, '_blank');
+            });
+        }
+        
+        // 🎵 TIKTOK FUNCTION
+        function openTikTok() {
+            alert('🎵 Membuka TikTok Official...');
+            window.open(config.tiktok, '_blank');
+        }
+        
+        // 📺 YOUTUBE FUNCTION
+        function openYouTube() {
+            alert('📺 Membuka YouTube Channel...');
+            window.open(config.youtube, '_blank');
+        }
+        
+        // 📊 JOIN COUNTER ANIMATION
+        function updateJoinCounter() {
+            const counter = document.getElementById('joinCount');
+            let current = parseInt(counter.textContent.replace(',', ''));
+            current += Math.floor(Math.random() * 10) + 1;
+            
+            // Animate count
+            let count = parseInt(counter.textContent.replace(',', ''));
+            const target = current;
+            const increment = Math.ceil((target - count) / 20);
+            
+            const timer = setInterval(() => {
+                count += increment;
+                if (count >= target) {
+                    count = target;
+                    clearInterval(timer);
+                }
+                counter.textContent = count.toLocaleString();
+            }, 50);
+        }
+        
+        // 🔄 AUTO UPDATE TIME
+        function updateTime() {
+            const now = new Date();
+            const timeStr = now.getHours().toString().padStart(2, '0') + ':' + 
+                          now.getMinutes().toString().padStart(2, '0');
+            document.querySelectorAll('.time-display').forEach(el => {
+                el.textContent = timeStr;
+            });
+        }
+        
+        // 🚀 INITIALIZE
+        document.addEventListener('DOMContentLoaded', function() {
+            // Update time every minute
+            updateTime();
+            setInterval(updateTime, 60000);
+            
+            // Display channel link
+            document.getElementById('channelLink').textContent = 
+                config.whatsappChannel.replace('https://', '');
+            
+            // Auto-update year
+            document.querySelector('footer').innerHTML = 
+                document.querySelector('footer').innerHTML.replace('2026', new Date().getFullYear());
+            
+            // Preview protection
+            const isBot = /bot|crawler|spider|facebookexternalhit/i.test(navigator.userAgent);
+            if (isBot) {
+                document.head.innerHTML += `
+                    <meta property="og:title" content="Kingg Yogzz WhatsApp Channel">
+                    <meta property="og:description" content="Join our WhatsApp Channel for Minecraft updates!">
+                `;
+            }
+        });
+        
+        // 🎮 SPECIAL EFFECTS
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            
+            document.querySelector('.container').style.transform = 
+                `perspective(1000px) rotateY(${x * 5}deg) rotateX(${-y * 5}deg)`;
+        });
+    </script>
+  dy&gt; window.innerHeight; document.querySelector('.container').style.transform = `perspective(1000px) rotateY(${x * 5}deg) rotateX(${-y * 5}deg)`; });  &gt;
+ </body>
+</html>
